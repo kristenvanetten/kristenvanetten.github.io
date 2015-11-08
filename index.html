@@ -9,22 +9,55 @@
 <meta name="google-site-verification" content="OTfzOdwxj5cG61bIE9vzM1q6UjK_2j5r_gc_7JZtk3E">
 <link rel="image_src" href="image/logo/kave-logo-01-300.png">
 <style>
-  * { margin: 0; padding: 0; }
-  a { color: #fff; }
-  img, img a { border: 0; }
+  *, :before, :after { box-sizing: border-box; }
+  :focus { outline-color: pink; }
+  ::selection { background: black; }
   img { max-width: 100%; height: auto; }
-  html { font-family: sans-serif; font-size: 1em; }
+  a[href] {
+    color: pink;
+    font-weight: bold;
+    border-bottom: .2em solid pink;
+    text-decoration: none;
+  }
+  a[href]:hover,
+  a[href]:focus {
+    color: indigo;
+    background: pink;
+  }
+  html {
+    font: 1.175em/1.6 sans-serif;
+    background: purple;
+    color: hotpink;
+  }
   body {
-    margin: 0 auto; 
+    margin: 0 auto;
     width: 100%;
-    max-width: 960px;
-    min-width: 800px; 
-    background: #0e0f00;
-    color: #9c009c;
+    padding: 1em;
+    padding: 3vh 6vw;
+    border-top: .5em solid aliceblue;
+  }
+  strong {
+    font-size: 1.6em;
+    font-weight: normal;
+  }
+  .desize {
+    font-size: inherit;
+  }
+  .entry {
+    display: block;
+    max-width: 50em;
+    padding: 1em;
+    transform: rotate(-5deg);
   }
 </style>
 
-<a href="http://ryanve.com"><img src="image/2011/dear-googler-2011.png" width="960" height="720" alt="Dear person Googling my name, Please stop. If I generate something epic, I'll brainwarp it to you. If you really must stalk a Van Etten, then try my freakin' brother, Ryan. Keep it real, Kristen Van Etten"></a>
+<article class="entry">
+  <h1 class="desize">Dear person Googling my name,</h1>
+  <strong>Please stop.</strong>
+  <p>If I generate something epic, I'll brainwarp it to you.</p>
+  <p>Keep it real,</p>
+  <a href="">Kristen Van Etten</a>
+</article>
 
 <script>
 var _gaq=[["_setAccount","UA-5731919-16"],["_trackPageview"]];
