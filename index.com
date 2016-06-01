@@ -52,11 +52,6 @@
 </style>
 
 <article class="entry">
-  <h1 class="desize">Dear person Googling my name,</h1>
-  <strong>Please stop.</strong>
-  <p>If I generate something epic, I'll brainwarp it to you.</p>
-  <p>Keep it real,</p>
-  <a href="">Kristen Van Etten</a>
 </article>
 
 <script>
