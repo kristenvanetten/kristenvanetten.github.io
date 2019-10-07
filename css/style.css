@@ -579,6 +579,20 @@ nav li {
 .final-section {
  display: none;
   }
+ 
+     .round-image {  
+      width: 200px;
+      height: 200px;
+      border-radius: 200px;
+    }
+
+    .prof-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 200px;
+    }
+ 
+ 
 }
 /************************************************************************************
 *********************************Media Query - Between X and Y ******************************************
