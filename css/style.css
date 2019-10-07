@@ -225,8 +225,7 @@ nav li {
     justify-content: center;
     align-content: center;
     padding: 10% 0;
-    flex-basis: 350px;
-    flex-grow: 1;
+    width: 50%;
   }
 
   .home-left {
