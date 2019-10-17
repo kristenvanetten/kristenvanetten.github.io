@@ -40,7 +40,7 @@ h3 {
   margin: 5px 0px;
   font-size: 1.2em;
   font-weight: bold;
-  font-family: "arial black", arial, sans-serif; 
+  font-family: "arial black", arial, sans-serif;
 }
 
 img {
@@ -82,7 +82,7 @@ footer p {
   background-image: url(../images/header_bar.jpg);
   opacity: .7;
   width: 100%;
-  height: 141px;
+  height: 124px;
   background-size: cover;
   background-position: center;
 }
@@ -368,7 +368,7 @@ nav li {
 
 .final-section {
   min-height: 100vh;
-  padding-top: 85px;
+  /*padding-top: 85px;*/
   background-color: #bc9ec1;
   background-image: url(../images/header_bar.jpg); 
   background-attachment: fixed;
@@ -376,6 +376,8 @@ nav li {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
 
 /************************************************************************************
 *********************************Sample Page******************************************
@@ -576,11 +578,11 @@ nav li {
 *************************************************************************************/
 
 @media (max-width: 768px) {
-.final-section {
- display: none;
+  .final-section {
+   display: none;
   }
- 
-     .round-image {  
+
+    .round-image {  
       width: 200px;
       height: 200px;
       border-radius: 200px;
@@ -591,8 +593,13 @@ nav li {
       height: 200px;
       border-radius: 200px;
     }
- 
- 
+
+    .about-section {
+      background-color: #fde8e9;
+      background-image: url(#); 
+    }
+
+
 }
 /************************************************************************************
 *********************************Media Query - Between X and Y ******************************************
@@ -612,3 +619,83 @@ nav li {
     
 }*/
 
+/************************************************************************************
+*********************************Media Query - Height Shorter than 600 ******************************************
+*************************************************************************************/
+
+@media (max-height: 600px) {
+.header-bar {
+     display: none;
+    }
+
+
+  .final-section {
+   display: none;
+  }
+
+  }
+
+/************************************************************************************
+*********************************Media Query - Height Shorter than 600 ******************************************
+*************************************************************************************/
+
+@media (min-height: 401px) and (max-height: 600px) {
+    
+
+    .home-name {
+      font-size: 2.4em;
+    }
+
+    .round-image {  
+      width: 200px;
+      height: 200px;
+      border-radius: 200px;
+    }
+
+    .prof-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 200px;
+    }
+
+
+}
+
+
+/************************************************************************************
+*********************************Media Query - Height Shorter than 400 ******************************************
+*************************************************************************************/
+
+@media (max-height: 400px) {
+
+
+ .round-image {  
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+  }
+
+    .prof-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 150px;
+    }
+
+    .home-name {
+      font-size: 2em;
+    }
+
+   /*.home-left {
+      height: 350px;
+    }*/
+
+  .portfolio-type {
+    padding: 15px;
+    width: 270px;
+  }  
+
+  .type-image {
+        width: 100px;
+  }      
+
+}
