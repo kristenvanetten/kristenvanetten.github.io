@@ -45,97 +45,46 @@ $(document).ready(() => {
 $('.anchor').on('click', function(e) {
   e.preventDefault()
 
-//Offset for when scrolled down and sticky nav in place //
-if ($("a").hasClass("anchor offset1")) {
+  //Offset for when scrolled down and sticky nav in place //
+  if ($("a").hasClass("anchor offset1")) {
 
-// alert("Hello! If");
-  $('html, body').animate(
-    {
-      scrollTop: $($(this).attr('href')).offset().top -18,
-    },
-    500,
-    'linear'
-  )
+      // alert("Hello! If");
+      $('html, body').animate(
+        {
+          scrollTop: $($(this).attr('href')).offset().top -18,
+        },
+        500,
+        'linear'
+      )
+  } 
 
-//Offset when clicking from top of window//
-} else {
+  else {
 
-// alert("Hello! Else");
-  $('html, body').animate(
-    {
-      scrollTop: $($(this).attr('href')).offset().top -76,
-    },
-    500,
-    'linear'
-  );
-}
+      // Offset for when starting at top;
+        $('html, body').animate(
+          {
+            scrollTop: $($(this).attr('href')).offset().top -76,
+          },
+          500,
+          'linear'
+        );
+  }
 
 });
 
 
+///////////Smooth Scroll on Anchor2 Links//////////////////////////
+$('.anchor2').on('click', function(e) {
+  e.preventDefault()
 
+    $('html, body').animate(
+      {
+        scrollTop: $($(this).attr('href')).offset().top,
+      },
+      500,
+      'linear'
+    )
 
-/////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////Aromatherapy////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-// $(document).ready(() => {
+});
 
-//   $('.aroma-b1').on('click', () => {
-//       $('.aroma-exp-1').slideToggle(200);
-//     });
-
-//   $('.aroma-b2').on('click', () => {
-//       $('.aroma-exp-2').slideToggle(200);
-//     });
-
-//   $('.aroma-b3').on('click', () => {
-//       $('.aroma-exp-3').slideToggle(200);
-//     });
-
-// });
-
-
-
-
-
-
-////////////////////////////////////////////////////////////////////
-////////////////Buttons to Fade/Slide Images/////////////////////
-////////////////////////////////////////////////////////////////////
-
-// $(document).ready(() => {
-  
-//   $('.fade-out-button').on('click', () => {
-//     $('.fade-image').fadeOut(2500);
-//   });
-  
-//   $('.fade-in-button').on('click', () => {
-//     $('.fade-image').fadeIn(2500);
-//   });
-  
-//   $('.fade-toggle-button').on('click', () => {
-//     $('.fade-image').fadeToggle(2500);
-//   });
-  
-//   $('.up-button').on('click', () => {
-//     $('.slide-image').slideUp(1000);
-//   });
-  
-//   $('.down-button').on('click', () => {
-//     $('.slide-image').slideDown(1000);
-//   });
-  
-//   $('.slide-toggle-button').on('click', () => {
-//     $('.slide-image').slideToggle(1000);
-//   });
-
-//   $('.popup-button').on('click', () => {
-//       $('.popup-window').toggleClass('hide-element');
-//     });
-
-//   $('.close-popup').on('click', () => {
-//       $('.popup-window').toggleClass('hide-element');
-//     });
-  
-// });
 
