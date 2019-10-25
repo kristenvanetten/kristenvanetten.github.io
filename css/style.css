@@ -219,13 +219,14 @@ nav li {
   align-items: stretch;
 }
 
+
   .home-left, .home-right {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    padding: 10% 0;
-    flex-basis: 350px;
+    padding: 50px 0;
+    flex-basis: 385px;
     flex-grow: 1;
   }
 
@@ -243,7 +244,7 @@ nav li {
     .home-name {
       max-width: 85%;
       margin: 0 auto;
-      padding: 25px;
+      padding: 2%;
       color: #e3bac6;
       font-family: "rock salt", cursive, sans-serif;
       font-size: 3em;
@@ -254,19 +255,21 @@ nav li {
     }
 
     .round-image {  
-      width: 250px;
-      height: 250px;
-      border-radius: 250px;
-      margin: 0 auto;
+      width: 225px;
+      height: 225px;
+      border-radius: 225px;
+      margin: 10px auto;
       text-align: center;
       box-shadow: 3px 3px 5px black;
       animation: portfolio-pop-on .7s;
+      display: flex;
+      flex-shrink: 1;
     }
 
     .prof-image {
-      width: 250px;
-      height: 250px;
-      border-radius: 250px;
+      width: 225px;
+      height: 225px;
+      border-radius: 225px;
     }
 
 .home-right {
@@ -277,6 +280,7 @@ nav li {
     width: 70%;
     max-width: 960px;
     line-height: 2em;
+    padding: 10px;
     margin: auto;
     animation: portfolio-pop-on .7s;
   }
@@ -574,76 +578,43 @@ nav li {
 
 
 /************************************************************************************
-*********************************Media Query - Smaller than 768 ******************************************
+*********************************Media Query - Width Smaller than 480 ******************************************
+*************************************************************************************/
+@media (max-width: 480px) {
+
+    #home-nav-link {
+      display: none;
+    }
+
+    .nav-link {
+      padding: 12px 10px;
+    }  
+}
+/************************************************************************************
+*********************************Media Query - Width Smaller than 768 ******************************************
 *************************************************************************************/
 
 @media (max-width: 768px) {
-  .final-section {
-   display: none;
-  }
 
-    .round-image {  
-      width: 200px;
-      height: 200px;
-      border-radius: 200px;
-    }
-
-    .prof-image {
-      width: 200px;
-      height: 200px;
-      border-radius: 200px;
-    }
+    .final-section {
+     display: none;
+    }    
 
     .about-section {
       background-color: #fde8e9;
       background-image: url(#); 
     }
 
-
 }
-/************************************************************************************
-*********************************Media Query - Between X and Y ******************************************
-*************************************************************************************/
-
-/*@media (min-width: 769px) and (max-width: 1220px) {
-
-}*/
 
 /************************************************************************************
-*********************************Media Query - Larger than Y ******************************************
+*********************************Media Query - Width Smaller than 1024 ******************************************
 *************************************************************************************/
 
-/*@media (min-width: 1300px) {
-**********home with grid 3 columns**********
-
-    
-}*/
-
-/************************************************************************************
-*********************************Media Query - Height Shorter than 600 ******************************************
-*************************************************************************************/
-
-@media (max-height: 600px) {
-.header-bar {
-     display: none;
-    }
-
-
-  .final-section {
-   display: none;
-  }
-
-  }
-
-/************************************************************************************
-*********************************Media Query - Height Shorter than 600 ******************************************
-*************************************************************************************/
-
-@media (min-height: 401px) and (max-height: 600px) {
-    
+@media (max-width: 1024px) {
 
     .home-name {
-      font-size: 2.4em;
+      font-size: 2.8em;
     }
 
     .round-image {  
@@ -658,9 +629,42 @@ nav li {
       border-radius: 200px;
     }
 
-
 }
 
+
+/************************************************************************************
+*********************************Media Query - Shorter than 600 Wider 770******************************************
+*************************************************************************************/
+
+@media (max-height: 600px) and (min-width: 770px) {
+    .header-bar {
+      display: none;
+    }
+ }
+
+/************************************************************************************
+*********************************Media Query - Height 400 to 600 ******************************************
+*************************************************************************************/
+
+@media (min-height: 401px) and (max-height: 600px) {
+    
+    .home-name {
+      font-size: 2.8em;
+    }
+
+    .round-image {  
+      width: 200px;
+      height: 200px;
+      border-radius: 200px;
+    }
+
+    .prof-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 200px;
+    }
+
+}
 
 /************************************************************************************
 *********************************Media Query - Height Shorter than 400 ******************************************
@@ -668,12 +672,24 @@ nav li {
 
 @media (max-height: 400px) {
 
+   .header-bar {
+    display: none;
+   }
 
- .round-image {  
-    width: 150px;
-    height: 150px;
-    border-radius: 150px;
-  }
+   .about-section {
+     background-color: #fde8e9;
+     background-image: url(#); 
+    }
+
+   .home-left, .home-right {
+    flex-basis: 100%;
+   }
+
+   .round-image {  
+      width: 150px;
+      height: 150px;
+      border-radius: 150px;
+    }
 
     .prof-image {
       width: 150px;
@@ -682,20 +698,20 @@ nav li {
     }
 
     .home-name {
-      font-size: 2em;
+      font-size: 2.4em;
     }
 
-   /*.home-left {
-      height: 350px;
-    }*/
+    .portfolio-type {
+      padding: 15px;
+      width: 250px;
+    }  
 
-  .portfolio-type {
-    padding: 15px;
-    width: 270px;
-  }  
+    .type-image {
+      width: 100px;
+    }      
 
-  .type-image {
-        width: 100px;
-  }      
+    .final-section {
+     display: none;
+    }
 
 }
