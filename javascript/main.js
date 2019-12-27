@@ -88,3 +88,28 @@ $('.anchor2').on('click', function(e) {
 });
 
 
+////////////////////////////////////////////////////////////////////
+////////////////Buttons to Fade/Slide Images/////////////////////
+////////////////////////////////////////////////////////////////////
+
+$(document).ready(() => {
+  
+  $('.m-dropdown-trigger').on('click', () => {
+    $('.mobile-dropdown-content').slideToggle();
+  });
+
+   $('.dropdown-trigger').on('click', () => {
+    $('.dropdown-content').slideToggle();
+  });
+
+  //   $('.mobile-dropdown-content').on('click', () => {
+  //   $('.mobile-dropdown-content').fadeToggle();
+  // });
+
+  //   $('.dropdown-content').on('click', () => {
+  //   $('.dropdown-content').slideToggle();
+  // });
+
+  
+});
+
