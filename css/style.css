@@ -19,7 +19,7 @@ h1 {
   margin: 0px;
   padding: 10px 25px;
   text-align: center;
-  font-family: "rock salt", cursive;
+  font-family: "rock salt", cursive, sans-serif;
 /*  font-size: 1.6em;*/
   color: #68185a; 
   text-shadow: 1px 1px 3px #c49bbb;
@@ -103,7 +103,6 @@ nav {
   width: 100%;
 }
 
-
 .nav-circles {
   display: inline-block;
   float: left;
@@ -123,7 +122,7 @@ nav {
     margin: 4px -5px;
     line-height: 40px;
     text-align: center;
-    font-family: "rock salt";
+    font-family: "rock salt", cursive, sans-serif;
     color: #ffffff;
   }
 
@@ -151,10 +150,23 @@ nav li {
   padding: 5px;
 }
 
+  nav ul {
+  display: block;
+  margin: 0px 25px 0px 0px;
+  padding: 0px;
+  align-items: middle;
+  line-height: 25px;
+}
+
+.mobile-menubar {
+  display: none;
+}
+
+
 .nav-link {
   padding: 12px 25px;
   background-color: #000000;
-  font-family: "rock salt";  
+  font-family: "rock salt", cursive, sans-serif;  
   color: #ffffff;
   text-align: center;
 }
@@ -164,6 +176,7 @@ nav li {
   color: #ffffff;
   font-size: 1.05em;
 }
+
 
 /**********************Dropdown**********************/
 
@@ -205,6 +218,17 @@ nav li {
     font-size: 1.1em;
   }
 
+  .selected {
+    background-color: #ababab;
+    color: #68185a;
+    font-weight: bold;
+  }
+
+  .selected:hover {
+    background-color: #ababab;
+    color: #68185a;  
+    font-size: 1em;
+  }  
 
 /************************************************************************************
 *********************************Home******************************************
@@ -291,13 +315,14 @@ nav li {
 
 .about-section {
   min-height: 100vh;
-  background-color: #eeeeee;
+  background-color: #fde8e9;
+  /*background-color: #eeeeee;
   padding-top: 18px;
   background-image: url(../images/header_bar_faded.jpg); 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
 }
 
 .about-section:target {
@@ -329,7 +354,8 @@ nav li {
     max-width: 1300px;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: center;    
+    align-content: center;
+    padding-bottom: 35px;    
     margin: 0 auto;
     color: #000000;
   }
@@ -340,7 +366,7 @@ nav li {
       height: auto;
       margin: 20px 30px;
       border: .1em solid #a4508b;
-      padding: 50px 25px;
+      padding: 45px 25px;
       border-radius: 10px;
       background: #a4508b; /* Old browsers */
       background: -moz-linear-gradient(-45deg, #a4508b 0%, #c49bbb 29%, #e3bac6 68%, #fde8e9 100%); /* FF3.6-15 */
@@ -349,7 +375,7 @@ nav li {
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4508b', endColorstr='#fde8e9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
       box-shadow: 2px 2px 5px rgba(0, 0, 0, .4), 0px 2px 2px;
       color: #000000;
-      font-family: "arial black";
+      font-family: "arial black", arial, sans-serif;
       font-size: 1.2em;
       text-align: center;
       text-shadow: 1px 1px #ffffff;  
@@ -396,6 +422,10 @@ nav li {
  padding-top: 15px;
 }
  
+    .sample-text {
+      padding: 2px 0px 8px;  
+    } 
+
     .sample-image {
       width: 100%;
       height: auto;
@@ -425,7 +455,7 @@ nav li {
   display: block;
   position: relative;
   max-width: 960px;
-  padding: 25px;
+  padding: 35px;
   margin: 75px auto;
   text-align: center;
 }
@@ -440,10 +470,10 @@ nav li {
   position: absolute;
   z-index: 2;
   font-size: 1em;
-  padding: 2px 5px;
+  padding: 5px;
   background-color: #ffffff;
   font-weight: bold;
-  font-family: "rock salt";
+  font-family: "rock salt", cursive, sans-serif
 }
 
   .top {
@@ -469,12 +499,13 @@ nav li {
 .bookmark, .bookmark:visited {
   color: #68185a;
   text-decoration: underline;
-  font-weight: 545;
+  font-weight: 547;
 }
 
 .bookmark:hover, .bookmark:visited:hover {
   color: #A4508B;
   text-decoration: underline;
+  font-weight: 630;
 }
 
 .anchor {
@@ -486,14 +517,15 @@ nav li {
   max-width: 960px;
   line-height: 1.4em;
   margin: 10px auto;
-  padding: 10px 25px 25px 25px;
+  padding: 10px 35px 25px 35px;
 }
+
 
 
 .basic-text {  
   display: block;
   margin: 0 auto;
-  padding: 10px 25px;
+  padding: 10px 35px;
   line-height: 1.4em;
 }
 
@@ -503,7 +535,7 @@ nav li {
 .image-container {
   display: block;
   margin: 0 auto;
-  padding: 10px 25px;
+  padding: 10px 35px;
 }
 
 .narrow { /*image container type*/
@@ -532,7 +564,7 @@ nav li {
   border: .5px solid #424B54;
   margin: 10px 0;
   width: 150px;
-  font-family: "rock salt";
+  font-family: "rock salt", cursive, sans-serif;
   font-size: ".4em";
   text-align: center;
   box-shadow: 1px 1px 3px #424b54;
@@ -566,8 +598,8 @@ nav li {
 
 .recipe {
   border: 1px dashed #424b54;
-  padding: 25px;
-  margin: 25px;
+  padding: 35px;
+  margin: 35px;
   max-width: 910px;
 }
 
@@ -579,21 +611,6 @@ nav li {
 }
 
 
-
-
-/************************************************************************************
-*********************************Media Query - Width Smaller than 480 ******************************************
-*************************************************************************************/
-@media (max-width: 480px) {
-
-    #home-nav-link {
-      display: none;
-    }
-
-    .nav-link {
-      padding: 12px 10px;
-    }  
-}
 /************************************************************************************
 *********************************Media Query - Width Smaller than 768 ******************************************
 *************************************************************************************/
@@ -719,3 +736,62 @@ nav li {
     }
 
 }
+
+/************************************************************************************
+*********************************Media Query - Width Smaller than 480 ******************************************
+*************************************************************************************/
+@media (max-width: 480px) {
+
+.menubar {
+  display: none;
+}
+
+.mobile-menubar {
+  display: inline-block;
+}
+
+  #menu-link {
+    padding: 10px 25px 7px 50px;
+    display: block;
+  }
+
+      .menu_icon {
+        width: 25px;
+        height: 25px;
+      }
+
+      #menu-link:hover {
+        background-color: #68185a;
+      }
+
+    .mobile-dropdown-content {
+          display: none;
+          position: absolute;
+          right: 0px;
+          z-index: 2;
+          width: 60%;
+          font-size: .8em;
+          margin: 0 auto;
+        }
+
+        .mobile-dropdown:hover .mobile-dropdown-content {
+          display: block;          
+        }
+
+        .nav-link {
+        width: 100%;
+        border: .5px solid #333333;
+        padding: 10px;
+        text-align: left;
+        }
+
+        .subnav-link {
+        width: 100%;
+        line-height: 2.2em;
+        padding: 8px;
+        text-align: left;
+        text-indent: 20px;
+        }
+
+}
+
