@@ -1,18 +1,26 @@
-
 ////////Play Animation Button////////////////
 
 $(document).ready(() => {
   $('.animation-trigger').on('click', () => {
       $('.toggle-animation').toggleClass('animation-on');
       $('.toggle-animation').toggleClass('hide-element');
-
+      
    // Change Text of button
-        if( $('.toggle-animation').hasClass('animation-on') ) {
+        if( $('.text-swap').hasClass('animation-on') ) {
           $('.animation-trigger').text('Hide Animation');
         }
         else {
         $('.animation-trigger').text('Play Animation');
         }
+
+    // [this doens't work] if(document.getElementByID('a-background').hasClass('animation-on') ) {
+    //       $('.animation-trigger').text('Hide Animation');
+    //     }
+    //     else {
+    //     $('.animation-trigger').text('Play Animation');
+    //     }
+
+    
     });
 });
 
@@ -20,7 +28,7 @@ $(document).ready(() => {
 ////////Sticky header/////////////////
 
   // When the user scrolls the page, execute myFunction 
-  window.onscroll = function() {myFunction()};  
+  window.onscroll = function() {myFunction();};  
 
   // Get the header
   var navbar = document.getElementById("my-navbar");
@@ -43,7 +51,7 @@ $(document).ready(() => {
 
 ///////////Smooth Scroll on Anchor Links//////////////////////////
 $('.anchor').on('click', function(e) {
-  e.preventDefault()
+  e.preventDefault();
 
   //Offset for when scrolled down and sticky nav in place //
   if ($("a").hasClass("anchor offset1")) {
@@ -55,7 +63,7 @@ $('.anchor').on('click', function(e) {
         },
         500,
         'linear'
-      )
+      );
   } 
 
   else {
@@ -75,7 +83,7 @@ $('.anchor').on('click', function(e) {
 
 ///////////Smooth Scroll on Anchor2 Links//////////////////////////
 $('.anchor2').on('click', function(e) {
-  e.preventDefault()
+  e.preventDefault();
 
     $('html, body').animate(
       {
@@ -83,23 +91,35 @@ $('.anchor2').on('click', function(e) {
       },
       500,
       'linear'
-    )
+    );
 
 });
 
 
 ////////////////////////////////////////////////////////////////////
-////////////////Buttons to Fade/Slide Images/////////////////////
+////////////////Mobile Menu Icon/////////////////////
 ////////////////////////////////////////////////////////////////////
 
 $(document).ready(() => {
   
   $('.m-dropdown-trigger').on('click', () => {
-    $('.mobile-dropdown-content').slideToggle();
+    $('.menu-container').toggleClass('mobile');
+    $('.dropdown').toggleClass('mobile');
+    $('.dropdown-content').toggleClass('mobile');
+
+    $('.menu-container mobile').slideToggle();
   });
 
-   $('.dropdown-trigger').on('click', () => {
-    $('.dropdown-content').slideToggle();
+  $('.close-trigger').on('click', () => {
+    $('.menu-container').toggleClass('mobile');
+    $('.dropdown').toggleClass('mobile');
+    $('.dropdown-content').toggleClass('mobile');
+
+    $('.menu-container mobile').slideToggle();
+  });
+
+  $('.b-trigger').on('click', () => {
+    $('.blog-return').toggleClass('hide-blog');
   });
 
   //   $('.mobile-dropdown-content').on('click', () => {
@@ -113,3 +133,135 @@ $(document).ready(() => {
   
 });
 
+////////////////////////////////////////////////////////////////////
+////////////////GIF Play on Rollover/////////////////////
+////////////////////////////////////////////////////////////////////
+
+$(document).ready(function()
+{
+    $(".gif-swap").hover(
+        function()
+        {
+          var src = $(this).attr("src");
+          $(this).attr("src", src.replace(/\.jpg$/i, "_GIF.gif"));
+        },
+        function()
+        {
+          var src = $(this).attr("src");
+          $(this).attr("src", src.replace(/\_GIF.gif$/i, ".jpg"));
+        });
+});
+
+
+////////////////////////////////////////////////////////////////////
+////////////////Slideshow/////////////////////
+////////////////////////////////////////////////////////////////////
+
+$(document).ready(() => {
+  
+  $('.btn1').on('click', () => {    
+    $('.slide1').slideToggle(600);
+    $('.slide2').slideUp();
+    $('.slide3').slideUp();
+    $('.slide4').slideUp();
+    $('.slide5').slideUp();
+    $('.slide6').slideUp();
+    $('.btn1').toggleClass('inactive');
+    $('.btn2').removeClass('inactive');
+    $('.btn3').removeClass('inactive');
+    $('.btn4').removeClass('inactive');
+    $('.btn5').removeClass('inactive');
+    $('.btn6').removeClass('inactive');
+  });
+
+    $('.btn2').on('click', () => {
+    $('.slide2').slideToggle(600);
+    $('.slide1').slideUp();
+    $('.slide3').slideUp();
+    $('.slide4').slideUp();
+    $('.slide5').slideUp();
+    $('.slide6').slideUp();
+    $('.btn1').removeClass('inactive');
+    $('.btn2').toggleClass('inactive');
+    $('.btn3').removeClass('inactive');
+    $('.btn4').removeClass('inactive');
+    $('.btn5').removeClass('inactive');
+    $('.btn6').removeClass('inactive');
+  });
+
+    $('.btn3').on('click', () => {
+    $('.slide3').slideToggle(600);
+    $('.slide1').slideUp();
+    $('.slide2').slideUp();
+    $('.slide4').slideUp();
+    $('.slide5').slideUp();
+    $('.slide6').slideUp();
+    $('.btn1').removeClass('inactive');
+    $('.btn2').removeClass('inactive');
+    $('.btn3').toggleClass('inactive');
+    $('.btn4').removeClass('inactive');
+    $('.btn5').removeClass('inactive');
+    $('.btn6').removeClass('inactive'); 
+  });
+
+    $('.btn4').on('click', () => {
+    $('.slide4').slideToggle(600);
+    $('.slide1').slideUp();
+    $('.slide2').slideUp();
+    $('.slide3').slideUp();
+    $('.slide5').slideUp();
+    $('.slide6').slideUp();
+    $('.btn1').removeClass('inactive');
+    $('.btn2').removeClass('inactive');
+    $('.btn3').removeClass('inactive');
+    $('.btn4').toggleClass('inactive');
+    $('.btn5').removeClass('inactive');
+    $('.btn6').removeClass('inactive');  
+  });
+
+    $('.btn5').on('click', () => {
+    $('.slide5').slideToggle(600);
+    $('.slide1').slideUp();
+    $('.slide2').slideUp();
+    $('.slide3').slideUp();
+    $('.slide4').slideUp();
+    $('.slide6').slideUp();
+    $('.btn1').removeClass('inactive');
+    $('.btn2').removeClass('inactive');
+    $('.btn3').removeClass('inactive');
+    $('.btn4').removeClass('inactive');
+    $('.btn5').toggleClass('inactive');
+    $('.btn6').removeClass('inactive');
+  });
+
+    $('.btn6').on('click', () => {
+    $('.slide6').slideToggle(600);
+    $('.slide1').slideUp();
+    $('.slide2').slideUp();
+    $('.slide3').slideUp();
+    $('.slide4').slideUp();
+    $('.slide5').slideUp();
+    $('.btn1').removeClass('inactive');
+    $('.btn2').removeClass('inactive');
+    $('.btn3').removeClass('inactive');
+    $('.btn4').removeClass('inactive');
+    $('.btn5').removeClass('inactive');
+    $('.btn6').toggleClass('inactive');  
+  });
+
+
+
+ }); 
+// For Contact Form as PopUp
+
+// $(document).ready(() => {
+//   $('.contact-me').on('click', () => {
+//       $('.contact-form').slideToggle();
+//     });
+
+//   $('.close-contact').on('click', () => {
+//       $('.contact-form').slideToggle();
+//     });
+
+
+// });
