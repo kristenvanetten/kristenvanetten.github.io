@@ -173,7 +173,7 @@
   text-align: center;
   line-height: 250px;
   color: #ffffff;
-  font-family: "marker felt";
+  font-family: 'Gochi Hand', cursive;
   font-size: 1.5em;
   z-index: 7;
   animation: size-up 1s;
@@ -185,8 +185,8 @@
   text-align: center;
   line-height: 180px;
   color: #ffffff;
-  font-family: "marker felt";
-  font-size: 1.25em;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 1.2em;
   z-index: 7;
   animation: size-up 1s;
   animation-delay: 5.7s;
@@ -354,7 +354,7 @@
 
     #a-text2 {
       line-height: 120px;
-      font-size: .9em;
+      font-size: .8em;
     }
 
 }
@@ -388,7 +388,7 @@
 ************************On Sample - Name Animation********************************************
 *************************************************************************************/
 
-.name-wrap {
+.word-wrap {
 	background-color: #363E45;
   text-align: center;
   height: 28vw;
@@ -397,19 +397,19 @@
   align-items: center;
 }
 
-.name-wrap2 {
+.word-wrap2 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.name-letter {
+.letters {
   font-size: 9em;
-	font-family: "marker felt";
+	font-family: 'Gochi Hand', cursive;
   transition: font-size .7s, font-family .7s, text-shadow .7s;
 }
 
-.name-letter:hover {
+.letters:hover {
 	font-family: 'Fontdiner Swanky', cursive;
   font-size: 17em;
   text-shadow: 8px 8px 8px #000000;
@@ -418,49 +418,49 @@
 
 }
 
-.n-color1, .n-color2, .n-color3, .n-color4, .n-color5, .n-color6, .n-color7 {
+.l-color1, .l-color2, .l-color3, .l-color4, .l-color5, .l-color6, .l-color7 {
   color: #ffffff;
-  padding: 5px 25px 10px;
+  padding: 5px 30px 10px;
   transition: color .7s, transform .7s;
 }
 
-.n-color1:hover {
+.l-color1:hover {
   color: #1394d6;
   transform: rotate(-9deg) translateY(15px);
   transition: color .7s, transform .7s;
 }
 
-.n-color2:hover {
+.l-color2:hover {
   color: #ff9cfe;
   transform: rotate(8deg) translateY(-4px);
   transition: color .7s, transform .7s;
 }
 
-.n-color3:hover {
+.l-color3:hover {
   color: #adf96f;
   transform: rotate(-9deg) translateY(11px);
   transition: color .7s, transform .7s;
 }
 
-.n-color4:hover {
+.l-color4:hover {
   color: #a06ff9;
   transform: rotate(8deg) translateY(9px) translateX(15px);
   transition: color .7s, transform .7s;
 }
 
-.n-color5:hover {
+.l-color5:hover {
   color: #fa32ad;
   transform: rotate(-14deg) translateY(14px);
   transition: color .7s, transform .7s;
 }
 
-.n-color6:hover {
+.l-color6:hover {
   color: #6ff9ee;
   transform: rotate(8deg) translateY(-3px);
   transition: color .7s, transform .7s;
 }
 
-.n-color7:hover {
+.l-color7:hover {
   color: #1fd8f3;
   transform: rotate(-9deg) translateY(15px);
   transition: color .7s, transform .7s;
@@ -469,15 +469,15 @@
 /******************Media Query - Smaller than 1024********************/
 
 @media (max-width: 1024px) {
-  .name-letter {
+  .letters {
     font-size: 11vw;  
   }
 
-  .name-letter:hover {
+  .letters:hover {
   font-size: 17vw; 
   }
 
-.n-color1, .n-color2, .n-color3, .n-color4, .n-color5, .n-color6, .n-color7 {
+.l-color1, .l-color2, .l-color3, .l-color4, .l-color5, .l-color6, .l-color7 {
   padding: 0vw 2vw;
 }
 
