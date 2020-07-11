@@ -69,16 +69,16 @@
     <h1>Contact Me</h1>
      <br> 
     <p class="basic-text">Please reach out if you have any questions or would like more information about what you have seen. I would love to hear from you.</p>
-  	 <form action="https://kwes.io/api/foreign/forms/zZ2q2RRRz6jQ5bm0lQ9W" name="contact-me-form" method="post" enctype="text/plain">
+  	 <form action="https://kwes.io/api/foreign/forms/zZ2q2RRRz6jQ5bm0lQ9W" name="contact-me-form" method="post" redirect="http://kristenvanetten.com/contact_thanks" enctype="text/plain">
 
        <label for="name">Name:</label>
-  	   <input type="text" name="name" placeholder="Enter Your Name" required>
+  	   <input type="text" name="name" rules="required" placeholder="Enter Your Name" required>
        <br>
        <label for="email">Email:</label>
-  	   <input type="text" name="email" placeholder="Enter Your Email" required>
+  	   <input type="text" name="email" rules="required|email" placeholder="Enter Your Email" required>
        <br>
        <label for="message">Message:</label>
-       <textarea id="message" name="message" rows="10" cols="40" placeholder="Enter Your Message" required></textarea>
+       <textarea id="message" name="message" rules="required" rows="10" cols="40" placeholder="Enter Your Message" required></textarea>
 
     	 <input type="submit" value="Submit" class="my-button larger">
 
