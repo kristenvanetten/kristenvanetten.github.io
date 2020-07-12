@@ -14,6 +14,11 @@
   padding-right: 10px;
 }
 
+
+#play-xmas:hover {
+  margin-left: 10px;
+}
+
 /************************Tags for JavaScript************************/
 
 .hide-element {
@@ -385,11 +390,11 @@
 
 
 /************************************************************************************
-************************On Sample - Name Animation********************************************
+************************On Sample - Letter Animation********************************************
 *************************************************************************************/
 
 .word-wrap {
-	background-color: #363E45;
+  background-color: #363E45;
   text-align: center;
   height: 28vw;
   display: flex;
@@ -405,12 +410,12 @@
 
 .letters {
   font-size: 9em;
-	font-family: 'Gochi Hand', cursive;
+  font-family: 'Gochi Hand', cursive;
   transition: font-size .7s, font-family .7s, text-shadow .7s;
 }
 
 .letters:hover {
-	font-family: 'Fontdiner Swanky', cursive;
+  font-family: 'Fontdiner Swanky', cursive;
   font-size: 17em;
   text-shadow: 8px 8px 8px #000000;
 	text-transform: uppercase;
