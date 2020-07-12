@@ -398,8 +398,6 @@ nav {
 *********************************************************************************/
 
 .final-section {
-  min-height: 100vh;
-  /*padding-top: 85px;*/
   background-color: #C49BC4;
   background-image: url(../images/header_bar.jpg); 
   background-attachment: fixed;
