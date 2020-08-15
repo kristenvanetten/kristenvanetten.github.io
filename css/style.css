@@ -234,6 +234,7 @@ nav {
   justify-content: center;
   align-items: stretch;
   align-content: stretch;
+  margin: 0px
 }
 
   .home-left, .home-right {
