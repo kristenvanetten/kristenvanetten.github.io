@@ -162,17 +162,7 @@ nav {
   font-size: 1.05em;
 }
 
-@media (hover: none) {
-  .nav-link:hover, .icon-container:hover {
-    background-color: #000000;
-    font-size: 1em;
-  }
 
-  .nav-link:active, .icon-container:active {
-    background-color: #68185a;
-    font-size: 1.05em;
-  }
-}  
 
 /*******************************Dropdown************************************/
 
