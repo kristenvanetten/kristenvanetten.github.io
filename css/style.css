@@ -410,7 +410,11 @@ nav {
   background-size: cover;
 }
 
-
+@media (any-pointer: none) {
+  .final-section {
+    display: none; 
+  }
+}
 
 
 /*********************************************************************************
