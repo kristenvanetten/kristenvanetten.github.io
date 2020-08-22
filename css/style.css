@@ -404,13 +404,19 @@ nav {
   min-height: 100vh;
   width: 100%;
   background-image: url(../images/header_bar.jpg); 
-  background-attachment: fixed, scroll;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-@media (any-pointer: none) {
+@media (pointer: none) {
+  .final-section {
+    display: none; 
+  }
+}
+
+@media (hover: none) {
   .final-section {
     display: none; 
   }
