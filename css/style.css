@@ -410,11 +410,14 @@ nav {
   background-size: cover;
 }
 
-@media (pointer: none) {
+
+
+@media (hover: none) {
   .final-section {
     display: none; 
   }
 }
+
 
 
 
