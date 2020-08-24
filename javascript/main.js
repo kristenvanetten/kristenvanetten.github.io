@@ -23,6 +23,30 @@
       }
     }
 
+//////////////////////////////////////
+
+    // When the user loads the page, execute myFunction (again)
+    window.onload = function() {myFunction();};  
+
+    // Get the header
+    var navbar = document.getElementById("my-navbar");
+
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky-nav");
+        $('.anchor').addClass('offset1');
+        
+      } else {
+        navbar.classList.remove("sticky-nav");
+        $('.anchor').removeClass('offset1');
+      }
+    }
+
+
 ////////////////////////////////////////////////////////////////////
 ////////////////////Smooth Scroll on Anchor Links//////////////////
 ////////////////////////////////////////////////////////////////////
@@ -98,6 +122,8 @@ $(document).ready(function()
     $('.menu-container').toggleClass('mobile');
     $('.dropdown').toggleClass('mobile');
     $('.dropdown-content').toggleClass('mobile');
+    $('.icon-container').toggleClass('hide');
+    $('.icon-close-container').toggleClass('visible');
 
     $('.menu-container mobile').slideToggle();
   });
@@ -106,6 +132,8 @@ $(document).ready(function()
     $('.menu-container').toggleClass('mobile');
     $('.dropdown').toggleClass('mobile');
     $('.dropdown-content').toggleClass('mobile');
+    $('.icon-container').toggleClass('hide');
+    $('.icon-close-container').toggleClass('visible');
 
     $('.menu-container mobile').slideToggle();
   });
@@ -348,4 +376,16 @@ $(document).ready(function() {
 //     });
 
 
+// });
+// $(document).ready(function() 
+// {
+  
+//   $('.test54').on('click', function() {
+//     $('.navbar').addClass('sticky-nav');
+
+//   });
+
+
+
+  
 // });
