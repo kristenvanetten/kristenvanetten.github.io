@@ -837,6 +837,8 @@ form {
     margin: 35px auto 25px;
     width: 150px;
     text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
   }
 
