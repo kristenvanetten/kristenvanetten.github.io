@@ -40,9 +40,15 @@
       </a>
     </div>
 
-  <div class="top-nav" id="myTopnav">  
+   <div class="top-nav" id="myTopnav">  
     
-    <span class="icon-container m-dropdown-trigger"><img src="images/menu_icon.png" alt="menu" class="menu_icon"></span>
+    <span class="icon-container m-dropdown-trigger">
+      <img src="images/menu_icon.png" alt="menu" class="menu_icon">
+    </span>
+    
+    <span class="icon-close-container close-trigger">
+      <span class="icon-close">&nbsp;X&nbsp;</span>
+    </span>
     <div class="menu-container">
     <a href="index.html#home" class="nav-link" id="home-link">Home</a> 
       <a href="index.html#about" class="nav-link">About</a>
@@ -57,8 +63,8 @@
           <a href="samples_photos.html" class="subnav-link">Photography</a>
         </div> <!-- close dropdown-content -->
       </div>  <!-- close dropdown -->
-     <a href="contact.html" class="nav-link">Contact</a>
-    </div> <!-- close menu-container -->  
+      <a href="contact.html" class="nav-link">Contact</a>
+     </div> <!-- close menu-container -->  
 
    </div>  <!-- close top-nav -->
 
@@ -66,8 +72,8 @@
 
 <!--  ..................End of Header and Navigation Bar...................... --> 
 
-
-  <div class="sample-heading">
+<main>
+  <header class="sample-heading">
     <h1 id="animations">Animation and Interaction</h1>
 
       <p class="basic-text">One of the great things about digital formats is that you have the ability to add animations that can't be captured in print. When used correctly, movement and interaction can create a much more engaging experience for a user. Below I have included examples of animations I have created that are meant to enhance a larger story.</p>
@@ -85,18 +91,18 @@
 
         </div> <!--close center-->
      
-  </div> <!-- close sample-heading -->
+  </header> <!-- close sample-heading -->
 
 
 <!--  .......................Sample Start............................ -->
   
-  <div class="container-960 anchor" id="s1"> 
-    <div class="sample-container-aos" data-aos="fade-up" data-aos-easing="ease-in-out-back">
+  <section class="container-960 anchor" id="s1"> 
+    <article class="sample-container-aos" data-aos="fade-up" data-aos-easing="ease-in-out-back">
 
       <h3>Story Openings</h3>
       <p class="sample-text">This is a series of animated GIFs I created using a combination of <i>Adobe Photoshop</i> and <i>Adobe After Effects</i>. This process included creating the background images themselves and then modifying them to create different frames of the animation. Each GIF is meant to serve as a title card/opener for a children’s story I wrote. I created several different designs for the same title before choosing one to move forward with. They all have the same general theme of incorporating stars and space into the design, because the characters in the story are all shaped like stars.<br><br>Roll over each image to see the animations.</p>
 
-      <div class="image-flex"> 
+      <figure class="image-flex"> 
         <img class="sample-image half gif-swap" src="images/animations/ss_blinking_colored_stars.jpg" alt="The Shimmering Stars">
 
         <img class="sample-image half gif-swap" src="images/animations/ss_blinking_white_stars.jpg" alt="The Shimmering Stars">
@@ -107,20 +113,20 @@
 
 
 
-      </div> <!-- close image-flex container --> 
+      </figure> <!-- close image-flex container --> 
 
-    </div> <!-- close sample-container-aos -->  
-  </div> <!-- close container-960 #s1 -->
+    </article> <!-- close sample-container-aos -->  
+  </section> <!-- close container-960 #s1 -->
 
 
 <!--  .......................Sample 2............................ -->
-  <div class="container-960" id="s2"> 
-    <div class="sample-container-aos" data-aos="fade-up" data-aos-easing="ease-in-out-back">
+  <section class="container-960" id="s2"> 
+    <article class="sample-container-aos" data-aos="fade-up" data-aos-easing="ease-in-out-back">
 
       <h3>Holiday Card</h3>
-      <p class="inline sample-text">This is an animation I created to use as a digital holiday greeting card. I used different sets of brushes in <i>Adobe Photoshop</i> to digitally paint the winter scene used as the background image. Then I coded the entire animation with HTML and CSS, using @keyframes rules to define the animations.</p><p class="my-button animation-trigger" id="play-xmas">Play Animation</p>
+      <p class="inline sample-text">This is an animation I created to use as a digital holiday greeting card. I used different sets of brushes in <i>Adobe Photoshop</i> to digitally paint the winter scene used as the background image. Then I coded the entire animation with HTML and CSS, using @keyframes rules to define the animations.</p><button class="my-button animation-trigger" id="play-xmas">Play Animation</button>
 
-      <div class="animation-container xmas-wrap"> 
+      <figure class="animation-container xmas-wrap"> 
 
         <div class="toggle-animation animation-on" id="a-poster"><!-- <img src="images/animations/xmas_poster.jpg" alt="Merry Christmas"> --></div>
 
@@ -152,23 +158,23 @@
 
         <div class="toggle-animation hide-element square" id="a-square-nine"></div>
 
-      </div> <!-- close animation-container xmas-wrap-->
+      </figure> <!-- close animation-container xmas-wrap-->
 
-    </div> <!-- close sample-container-aos -->  
-  </div> <!-- close container-960 #s2 -->
+    </article> <!-- close sample-container-aos -->  
+  </section> <!-- close container-960 #s2 -->
 
 <!--  .......................Sample 3............................ -->
 
-<div class="container-960" id="s3">
-    <div class="sample-container-aos" data-aos="fade-up" data-aos-easing="ease-in-out-back">
+  <section class="container-960" id="s3">
+    <article class="sample-container-aos" data-aos="fade-up" data-aos-easing="ease-in-out-back">
 
       <h3>Digital Art Slideshow</h3>
       <p class="sample-text">As part of a personal project, I digitally painted a series of abstract background images in <i>Adobe Photoshop</i>. Each image was created using different special effect brushes and enhanced with filters and layer styles. I coded this digital slideshow in JavaScript using jQuery effects to display the full set of images together.<br><br>Click each circle or the arrows to navigate through the slideshow.</p>
 
-      <div class="animation-container full abstract-wrap">
+      <figure class="animation-container full abstract-wrap">
 
-          <div class="back-arrow">&lt;</div>
-          <div class="next-arrow">&gt;</div>
+        <div class="back-arrow">&lt;</div>
+        <div class="next-arrow">&gt;</div>
 
         <div class="abstract slide0">
           <div class="back-button 0-back"></div>
@@ -215,20 +221,20 @@
         </div>  
 
 
-      </div> <!-- close image-flex container -->    
+      </figure> <!-- close image-flex container -->    
 
-    </div> <!-- close sample-container-aos -->  
-  </div> <!-- close container-960 #s3 -->
+    </article> <!-- close sample-container-aos -->  
+  </section> <!-- close container-960 #s3 -->
 
 <!--  .......................Sample 4............................ -->
 
-  <div class="container-960" id="s4">
-    <div class="sample-container-aos" data-aos="fade-up" data-aos-easing="ease-in-out-back">
+  <section class="container-960" id="s4">
+    <article class="sample-container-aos" data-aos="fade-up" data-aos-easing="ease-in-out-back">
 
       <h3>Letter Animation</h3>
       <p class="sample-text">This is a sample interactive feature I coded with HTML and CSS while teaching myself coding. It uses hover effects and CSS transitions to change the visual style of each letter in a word or string of text.<br><br>Roll over or click each letter to see the text animate.</p>
 
-      <div class="animation-container word-wrap">
+      <figure class="animation-container word-wrap">
         <div class="word-wrap2">
 
           <div class="letters" onclick=""><p class="l-color1">c</p></div>
@@ -239,51 +245,54 @@
           <div class="letters" onclick=""><p class="l-color6">e</p></div>
           
         </div>   <!-- close word-wrap2 -->
-      </div> <!-- close animation-container word-wrap-->
+      </figure> <!-- close animation-container word-wrap-->
 
-    </div> <!-- close sample-container-aos -->  
-  </div> <!-- close container-960 #s4 -->
+    </article> <!-- close sample-container-aos -->  
+  </section> <!-- close container-960 #s4 -->
 
-
+</main>
 <!--  .......................Bottom Nav............................ -->
 
 
-  <div class="container-960"> 
+  <section class="container-960"> 
     <p class="sample-text">See additional samples:</p>
     <div class="nav-flex">
 
-      <a href="samples_webdesign.html" class="bottom-nav bottom-active">
-        <img class="bottom-image" src="images/icons/responsivescreens.png" alt="">
-        <p>Web Design</p>
-      </a>  
+      <div class="nav-container">
+        <a href="samples_webdesign.html" class="bottom-nav bottom-active">
+          <img class="bottom-image" src="images/icons/responsivescreens.png" alt="">
+          <p>Web Design</p>
+        </a>  
 
-      <a href="samples_design.html" class="bottom-nav bottom-active">  
-        <img class="bottom-image" src="images/icons/paintbrush.png" alt="">
-        <p>Design and Layouts</p>
-      </a>
-      
-      <a href="#animations" class="bottom-nav bottom-selected anchor">        
-        <img class="bottom-image" src="images/icons/playbutton.png" alt="">
-        <p>Animation and Interactions</p>
-      </a>
+        <a href="samples_design.html" class="bottom-nav bottom-active">  
+          <img class="bottom-image" src="images/icons/paintbrush.png" alt="">
+          <p>Design and Layouts</p>
+        </a>
         
-      <a href="samples_documentation.html" class="bottom-nav bottom-active">  
-        <img class="bottom-image" src="images/icons/document.png" alt="">
-        <p>Process Documentation</p>
-      </a>  
+        <a href="#animations" class="bottom-nav bottom-selected anchor">        
+          <img class="bottom-image" src="images/icons/playbutton.png" alt="">
+          <p>Animation and Interactions</p>
+        </a>
+      </div>
 
-      <a href="samples_writing.html" class="bottom-nav bottom-active">  
-        <img class="bottom-image" src="images/icons/keyboard.png" alt="">
-        <p>Writing</p>
-      </a>  
- 
-      <a href="samples_photos.html" class="bottom-nav bottom-active">   
-        <img class="bottom-image" src="images/icons/camera.png" alt="">
-        <p>Photography</p>
-      </a>  
+      <div class="nav-container">      
+        <a href="samples_documentation.html" class="bottom-nav bottom-active">  
+          <img class="bottom-image" src="images/icons/document.png" alt="">
+          <p>Process Documentation</p>
+        </a>  
 
+        <a href="samples_writing.html" class="bottom-nav bottom-active">  
+          <img class="bottom-image" src="images/icons/keyboard.png" alt="">
+          <p>Writing</p>
+        </a>  
+   
+        <a href="samples_photos.html" class="bottom-nav bottom-active">   
+          <img class="bottom-image" src="images/icons/camera.png" alt="">
+          <p>Photography</p>
+        </a>  
+      </div>  
     </div> <!-- close nav-flex -->
-  </div> <!-- close container-960 bottom-nav -->
+  </section> <!-- close container-960 bottom-nav -->
 
 <!-- ...........................Contact and Footer.......................... -->  
 
