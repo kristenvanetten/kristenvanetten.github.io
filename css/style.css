@@ -1,13 +1,14 @@
 html {
- height: 100%;
-
+  height: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: arial, sans-serif; 
+  overflow-anchor: none;
 }
+
 
 p {
   max-width: 960px;
@@ -21,18 +22,17 @@ h1 {
   padding: 10px 25px;
   text-align: center;
   font-family: "rock salt", cursive, sans-serif;
-/*  font-size: 1.6em;*/
+  font-size: 2em;
   color: #68185a; 
   text-shadow: 1px 1px 2px #C49BC4;
-  line-height:;
+  line-height: 1.4em;
 }
 
 
 h2 {
   margin: 0px;
   padding: 10px 25px;
-  text-align: center;
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: bold;
   font-family: "arial black", "Archivo Black", arial, sans-serif;
 
@@ -40,7 +40,7 @@ h2 {
 
 h3 {
   margin: 5px 0px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: bold;
   font-family: "arial black", "Archivo Black", arial, sans-serif;
 }
@@ -49,20 +49,25 @@ img {
   width: 100%;
   height: auto;
   padding: 0px; 
-  display: block; 
+  display: block;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
 }
 
 a {
-  text-decoration: none;
+ text-decoration: none;
 }
 
 a:visited {
-  color: #ffffff;
+ color: #ffffff;
 }
 
 :focus {
-    outline-color: #68185A;
-  }
+  outline-color: #68185A;
+}
 
 
 /************************************************************************************
@@ -76,18 +81,19 @@ a:visited {
   height: 124px;
   background-size: cover;
   background-position: center;
+  position: relative;
+  top: 0px;
 }
 
 nav {
   width: 100%;
   height: 50px;
-  z-index: 3;  
+  z-index: 5;  
   background-color: #000000;
   color: #ffffff;
   text-align: right;
   scroll-behavior: auto;
 }
-
 
 .sticky-nav {
   position: fixed;
@@ -135,7 +141,7 @@ nav {
   display: none;
 }
 
-.icon-container {
+.icon-container, .icon-close-container {
   display: none;
 }
 
@@ -143,7 +149,9 @@ nav {
 .navbar {
   margin: 0px 15px 0px 0px;
   height: 50px;
+
 }
+
 
 
 .nav-link {
@@ -157,12 +165,22 @@ nav {
   line-height: 25px;
 }
 
-.nav-link:hover, .icon-container:hover {
+.nav-link:hover, .icon-container:hover, .icon-close-container:hover {
   background-color: #68185a;
   font-size: 1.05em;
 }
 
+/*@media (hover: none) {
+  .nav-link:hover, .icon-container:hover, .icon-close-container:hover {
+    background-color: #000000;
+    font-size: 1em;
+  }
 
+  .nav-link:active, .icon-container:active {
+    background-color: #68185a;
+    font-size: 1.05em;
+  }
+}  */
 
 /*******************************Dropdown************************************/
 
@@ -178,7 +196,7 @@ nav {
     display: none;
     position: absolute;
     right: 150px;
-    z-index: 2;
+    z-index: 4;
     width: 185px;
     font-size: .9em;
   }
@@ -212,6 +230,7 @@ nav {
     font-size: 1em;
   }  
 
+
 /******************************************************************************
 *********************************Home******************************************
 *******************************************************************************/
@@ -224,7 +243,9 @@ nav {
   justify-content: center;
   align-items: stretch;
   align-content: stretch;
-  margin: 0px
+  margin: 0px;
+  z-index: 3;
+  position: relative;
 }
 
   .home-left, .home-right {
@@ -243,7 +264,7 @@ nav {
     background-color: #A2508D;   
   }
 
-      .left-intro, .right-intro {
+    .left-intro, .right-intro {
       display: flex;
       width: 100%;
       flex-direction: column;
@@ -264,6 +285,7 @@ nav {
       text-shadow: 3px 3px 5px #000000;
       animation: portfolio-pop-on .7s;
       transition-timing-function: ease-in;
+      font-weight: normal;
     }
 
     .round-image {  
@@ -314,27 +336,26 @@ nav {
 ************************************About***************************************
 ********************************************************************************/
 
+
 .about-section {
   min-height: 110vh;
   background-color: #fde8e9;
-  padding-top: 30px;
   padding-bottom: 50px;
-}
+  padding-top: 75px;  
+  margin-top: -75px;
+  min-height: 110vh;
+  position: relative;
+  z-index: 2;
 
+}
 
 #about-960 {
   margin: 0 auto;
 }
 
 
-#about:target, #samples:target {
-  padding-top: 75px;
-  margin-top: -75px;
-}
-
-
 #aboutme, #worksamples {
-  padding-top: 25px;
+  padding-top: 30px;
 }
 
 
@@ -342,15 +363,18 @@ nav {
 /*******************************************************************************
 *********************************Portfolio/Samples******************************
 *******************************************************************************/
-.center {
-  text-align: center;
-}
 
 .samples-section {
   min-height: 110vh;
   background: rgb(0,0,0);
   background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(54,62,69,1) 25%, rgba(98,107,120,1) 50%, rgba(172,179,190,1) 75%, rgba(255,255,255,1) 100%);
-  padding-top: 30px;
+  padding-bottom: 15px;
+  padding-top: 75px;
+  margin-top: -75px;
+  z-index: 1;
+  display: inline-block;
+  width: 100%;
+  position: relative;
 }
 
   .portfolio-container {
@@ -389,7 +413,6 @@ nav {
       width: 315px;
       opacity: .7;
     }
-
  
       .type-image {
         display: inline-block;
@@ -404,21 +427,17 @@ nav {
   min-height: 100vh;
   width: 100%;
   background-image: url(../images/header_bar.jpg); 
-  background-attachment: fixed;
+  background-attachment: fixed, scroll;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-
-
-@media (hover: none) {
+@media (any-pointer: none), (hover: none), (max-width: 768px), (max-height: 400px) {
   .final-section {
     display: none; 
   }
 }
-
-
 
 
 /*********************************************************************************
@@ -441,6 +460,9 @@ padding-top: 25px;
   margin-top: -15px;
 } 
 
+.center {
+  text-align: center;
+}
 
 .horizontalline {
   display: block;
@@ -450,7 +472,6 @@ padding-top: 25px;
   padding: 0px 25px;
   box-shadow: 2px 2px 2px #424b54;
 } 
-
 
 .sample-container-aos {
  /* Extra container to add aos*/
@@ -471,6 +492,7 @@ padding-top: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-content: stretch;
     flex-wrap: wrap;
     box-sizing: border-box; 
     padding: 0px;
@@ -483,18 +505,28 @@ padding-top: 25px;
     .image-flex-alt { /*alt for when next to a stacking container */
       display: flex;
       justify-content: space-between;
+      align-items: stretch;
+      align-content: center;
       flex-wrap: wrap;
       box-sizing: border-box;
     }  
+    
+    .stack-main {
+      display: block;
+    }
 
-
-    .stacking-container { /*For stacking images next to larger image*/
+    .stack-side { /*For stacking images next to larger image*/
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
-      align-content: stretch;
+      align-content: space-between;
       flex-wrap: wrap;
       box-sizing: border-box;
+  	  margin-bottom: 8px;	
+    }
+
+    .stack-side img {
+     margin-bottom: 0px;
     }
 
   .sample-image {
@@ -505,7 +537,6 @@ padding-top: 25px;
     padding: 0px;
     display: block;
   }
-
    
 
 /*******************Image Sizes (for sample-image)************************/  
@@ -590,17 +621,26 @@ padding-top: 25px;
 .nav-flex {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  align-content: center;
+  align-items: flex-start;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav-container {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: space-between;
+  width: 47%;
 }
 
   .bottom-nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
     flex-wrap: wrap;
-    width: 12%;
+    width: 25%;
     font-size: .8em;
     text-align: center;
   }
@@ -611,16 +651,14 @@ padding-top: 25px;
   }
 
   .bottom-image {
-    flex-basis: 90px;
+    width: 90%;
     padding: 5px;
+    text-align: center;
+    margin: 0 auto;
   }
 
   .bottom-selected {
     opacity: .3;
-  }
-
-  .test2 {
-    text-align: center;
   }
 
 
@@ -637,18 +675,18 @@ padding-top: 25px;
 
 .bookmark, .bookmark:visited {
   color: #363E45;
-  font-weight: bold;
+  font-weight: 600;
   text-shadow: 0px 1px 0px #626B78; 
 }
 
 .bookmark:hover, .bookmark:visited:hover {
   color: #68185a;
   text-decoration: underline;
-  font-weight: 750;
+  font-weight: 700;
   text-shadow: 0px 1px 1px #68185a;
 }
 
-@media (hover: none) {
+/*@media (hover: none) {
   .bookmark:hover, .bookmark:visited:hover {
     color: #363E45;
     text-decoration: none;
@@ -662,7 +700,7 @@ padding-top: 25px;
     font-weight: 750;
     text-shadow: 0px 1px 1px #68185a;
   }
-}
+}*/
 
 
 .anchor {
@@ -687,6 +725,8 @@ padding-top: 25px;
   font-weight: 600;
   text-align: center;
   box-shadow: 1px 1px 3px #424b54;
+  box-sizing: content-box;
+  line-height: 1.4em;
 }
 
 .my-button:hover {
@@ -695,7 +735,7 @@ padding-top: 25px;
   transform: scale(1.1);  
 }
 
-@media (hover: none) {
+/*@media (hover: none) {
   .my-button:hover {
     background-color: #C49BC4;
     color: #000000;
@@ -706,7 +746,7 @@ padding-top: 25px;
     color: #ffffff;
     transform: scale(1.1);  
   }
-}  
+}  */
 
 .container-960 {  
   display: block;
@@ -714,6 +754,8 @@ padding-top: 25px;
   line-height: 1.4em;
   margin: 10px auto;
   padding: 10px 35px 25px 35px;
+/*  box-sizing: border-box;*/
+
 }
 
 
@@ -737,7 +779,6 @@ padding-top: 25px;
 .wide { /*image container type*/
   max-width: 960px;
 }
-
 
 
 /***************************************************************************
@@ -766,11 +807,9 @@ padding-top: 25px;
   top: 75px;
   left: 15px;
   margin-bottom: 50px;
+  z-index: 3;
 }
 
-.hide-blog {
-  display: none;
-}
 
 
 /*****************************************************************************
@@ -832,7 +871,6 @@ form {
 }
 
 
-
 /**************************************************************************
 *******************************Footer**************************************
 ***************************************************************************/
@@ -879,66 +917,12 @@ footer {
   height: 40px;
 }
 
-
-
-
-/********************************************************************************
-*********************Media Query - Width Smaller than 768 ***********************
-*********************************************************************************/
-
-@media (max-width: 768px) {
-
-    .final-section {
-     display: none;
-    }    
-
-}
-
-/*******************************************************************************
-***************************Media Query - Width Smaller than 1024 ***************
-********************************************************************************/
-
-@media (max-width: 1024px) {
-
-.final-section {
-  background-size: contain;
-}
-
-    .home-name {
-      font-size: 2.8em;
-    }
-
-    .round-image {  
-      width: 200px;
-      height: 200px;
-      border-radius: 200px;
-    }
-
-    .prof-image {
-      width: 200px;
-      height: 200px;
-      border-radius: 200px;
-    }
-
-}
-
-
-/******************************************************************************
-****************Media Query - Shorter than 600 Wider 770***********************
-*******************************************************************************/
-
-@media (max-height: 600px) and (min-width: 770px) {
-    .header-bar {
-      display: none;
-    }
- }
-
 /*****************************************************************************
-**************************Media Query - Height 400 to 600 ********************
+**************************Media Query - Home Page Adjustments ********************
 ******************************************************************************/
 
-@media (min-height: 401px) and (max-height: 600px) {
-    
+@media (max-width: 1024px), (min-height: 401px) and (max-height: 600px) {
+
     .home-name {
       font-size: 2.8em;
     }
@@ -957,9 +941,8 @@ footer {
 
 }
 
-/****************************************************************************
-********************Media Query - Height Shorter than 400 *******************
-*****************************************************************************/
+
+/***************************Media Query - Height Shorter than 400 *****************************/
 
 @media (max-height: 400px) {
 
@@ -996,58 +979,37 @@ footer {
       width: 100px;
     }      
 
-    .final-section {
-     display: none;
-    }
-
-
-
 }
+
+
 /*****************************************************************************
-**********************Media Query - Width Between 530 and 680 *******************
+**********************Media Query - Mobile Menu Bar *******************
 ******************************************************************************/
 
-@media (max-width: 700px) and (min-width: 531px) {
+@media (max-height: 600px) and (min-width: 770px) {
+    .header-bar {
+      display: none;
+    }
+ }
+
+
+@media (max-width: 700px) and (min-width: 571px) {
   #home-link {
     display: none;
   }
 
 }
 
-/*****************************************************************************
-**********************Media Query - Width Smaller than 875 *******************
-******************************************************************************/
-@media (max-width: 890px) {
-
-    .contact-page {
-      padding: 0px;
-      margin: 0px;
-    }
-
-    .contact-container {
-      margin: 0px;
-    }
-
-    .thanks {
-      min-height: 100vh;
-    }
-
-}
-
-
-/*****************************************************************************
-**********************Media Query - Width Smaller than 570 *******************
-******************************************************************************/
-@media (max-width: 570px) {
-
-.bottom-nav {
-    font-size: 2vw;
-  }
-
+@media (max-width: 570px), (max-height: 425px), (hover: none) {
 
 .menu-container {
   display: none;
-  margin: 0px;
+  margin: 0px 0px 50px 0px;
+  position: relative;
+  max-height: 85vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
 }
 
 .icon-container {
@@ -1055,6 +1017,35 @@ footer {
   width: 25px;
   height: 25px;
   padding: 12.5px 25px;
+}
+
+.icon-close-container {
+  width: 25px;
+  height: 25px;
+  padding: 12.5px 25px;
+}
+
+.icon-close {
+  color: #ffffff;
+  font-family: "arial black", "Archivo Black", arial, sans-serif;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #ffffff;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  font-size: 1.4em;
+  margin-left: -5px;
+}
+
+
+.visible {
+	display: inline-block;
+}
+
+.hide {
+	display: none;
 }
 
   .menu_icon {
@@ -1085,13 +1076,14 @@ footer {
   float: none;
   display: block;
   position: relative;
-  }
+  z-index: 4;
+}
 
     .dropdown-content .mobile{
       display: block;
       position: absolute;
       right: 0px;
-      z-index: 2;
+      z-index: 6;
       width: 80%;
       font-size: .8em;
       margin: 0;
@@ -1113,15 +1105,47 @@ footer {
     text-align: left;
     text-indent: 25px;
     }
-  
-  
 
-/*************Photo Page*********/
-
-  .caption {
-  font-size: .8em;
-  padding: 4px;
 }
+
+
+/*****************************************************************************
+*******************************Media Query - Bottom Nav ****************
+******************************************************************************/
+
+@media (max-width: 570px) and (min-width: 421px) {
+
+  .bottom-nav {
+    font-size: 2vw;
+  }
+
+}
+
+@media (max-width: 420px) {
+
+  .nav-container {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .bottom-nav {
+    font-size: 3vw;
+  }
+
+}
+
+/******************************************************************************
+****************Media Query - Photo Page***********************
+*******************************************************************************/
+
+
+@media (max-width: 570px), (max-height: 425px)
+
+{
+  .caption {
+    font-size: .8em;
+    padding: 4px;
+  }
 
   .top {
     top: 50px;
@@ -1139,11 +1163,24 @@ footer {
     right: 35px;
   }  
 
-
-
-
-
 }
 
+/*****************************************************************************
+**********************Media Query - Contact Page *******************
+******************************************************************************/
+@media (max-width: 890px) {
 
+    .contact-page {
+      padding: 0px;
+      margin: 0px;
+    }
 
+    .contact-container {
+      margin: 0px;
+    }
+
+    .thanks {
+      min-height: 100vh;
+    }
+
+}

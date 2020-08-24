@@ -20,7 +20,7 @@
   margin-left: 10px;
   }
 
-@media (hover: none) {
+/*@media (hover: none) {
   #play-xmas:hover {
    margin-left: 0px;
   }
@@ -28,7 +28,7 @@
   #play-xmas:active {
   margin-left: 10px;
   }
-}  
+}  */
 
 
 /************************Tags for JavaScript************************/
@@ -51,7 +51,8 @@
   position: relative;
   background-color: #ffffff;
   height: 520px;
-  box-sizing: border-box;  
+  box-sizing: border-box;
+  transform: translateZ(-1000px);  
 }
 
 .animation-on {
@@ -105,7 +106,7 @@
   width: 100%;
   height: 520px;
   z-index: 2;
-  top: 1px;
+  top: 0px;
   left: 0px;
   -webkit-animation: fade-in 6s;
           animation: fade-in 6s;
@@ -114,6 +115,7 @@
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   background-color: #ffffff;
+  transform: translateZ(-1000px);
 }
 
 @-webkit-keyframes fade-in {
@@ -173,16 +175,15 @@
 @keyframes twist-up {
   0%   {
     opacity: 0;
-    -webkit-transform: rotateX(45deg) rotateY(180deg);
-            transform: rotateX(45deg) rotateY(180deg); 
+    transform: rotateX(45deg) rotateY(180deg); 
+
   }
   100% {
     opacity: 1;
-    -webkit-transform: rotateX(0deg) rotateY(0deg);
-            transform: rotateX(0deg) rotateY(0deg);
+    transform: rotateX(0deg) rotateY(0deg);
+     
   }
 }
-
 
 #a-circle-two {
   top: 175px;
@@ -204,11 +205,12 @@
 @-webkit-keyframes twist-down {
   0%   {
     opacity: 0;
+     backface-visibility: hidden;
     -webkit-transform: rotateX(-45deg) rotateY(-180deg);
             transform: rotateX(-45deg) rotateY(-180deg); 
   }
   100% {
-    opacity: 1;  
+    opacity: 1;
   }
 }
 
@@ -216,10 +218,11 @@
   0%   {
     opacity: 0;
     -webkit-transform: rotateX(-45deg) rotateY(-180deg);
-            transform: rotateX(-45deg) rotateY(-180deg); 
+            transform: rotateX(-45deg) rotateY(-180deg);
   }
   100% {
     opacity: 1;  
+     backface-visibility: hidden;
   }
 }
 
@@ -288,7 +291,7 @@
   line-height: 180px;
   color: #ffffff;
   font-family: 'Gochi Hand', cursive;
-  font-size: 1.2em;
+  font-size: 1.1em;
   z-index: 7;
   -webkit-animation: size-up 1s;
           animation: size-up 1s;
@@ -742,6 +745,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0px 10px;
 }
 
 .letters {
@@ -812,11 +816,11 @@
 
 @media (max-width: 1024px) {
   .letters {
-    font-size: 11vw;  
+    font-size: 9vw;  
   }
 
   .letters:hover {
-  font-size: 17vw; 
+  font-size: 15vw; 
   }
 
 .l-color1, .l-color2, .l-color3, .l-color4, .l-color5, .l-color6, .l-color7 {
@@ -830,3 +834,550 @@
 
 
 
+
+/************************************************************************************
+*********************On Sample - Flipcard********************************************
+*************************************************************************************/
+/**** Transition Test *****/
+.anim-transition {
+  display: inline-block;
+  opacity: 0;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  background-color: beige;
+}
+
+.anim-transition:hover {
+  opacity: 1;
+  width: 300px;
+  height: 300px;
+  background-color: violet;
+  transition: width 2s, height 2s;
+}
+.aroma-wrap {
+  background-color: #C9C5BA; 
+  text-align: center;
+}
+
+.aromatherapy-text {
+}
+
+.aromatheraphy-button-container {
+/*Container for organizing slide down pieces*/
+}
+
+.aroma-button {
+  display: inline-block;
+  position: relative;
+  width: 277px;
+  height: 50px;
+  background-color: #C7EFCF;
+  margin: 10px;
+  border: 8px solid #b1deba;
+  box-shadow: 1px 1px 2px gray;
+}
+
+.aroma-b1 {
+  /*Class of animation for controling button in JavaScript*/
+  z-index: 6;
+}
+
+.aroma-b2 {
+  /*Class of animation for controling button in JavaScript*/
+  z-index: 4;  
+}
+
+.aroma-b3 {
+  /*Class of animation for controling button in JavaScript*/
+  z-index: 2;  
+}
+
+.aroma-details {
+  display: none;
+  position: absolute;
+  top: 56px;
+  left: 40px;
+  width: 200px;
+  height: 100px;
+  text-align: left;
+  background-color: #b1deba;
+}
+
+.aroma-exp-1 {
+  z-index: 7;
+  /*Class of animation for controling what opens in JavaScript*/
+}
+
+.aroma-exp-2 {
+  z-index: 5;
+  /*Class of animation for controling what opens in JavaScript*/
+}
+
+.aroma-exp-3 {
+  z-index: 3;
+  /*Class of animation for controling what opens in JavaScript*/
+}
+
+.aroma-flipcard-container {
+  /*Container for organizing flipcard pieces*/
+}  
+
+.aroma-flipcard {
+	display: inline-block;
+	background-color: transparent;
+	width: 200px;
+	height: 200px;
+	perspective: 800px;
+	align-items: center;
+	margin: 10px;
+ }
+
+.flipcard-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+  box-shadow: 2px 2px 4px;
+}
+
+
+.aroma-flipcard:hover .flipcard-inner {
+	transform: rotateY(-180deg);
+}
+
+.flipcard-front, .flipcard-back  {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  backface-visibility: hidden;
+}
+
+.flipcard-front {
+  z-index: 2;
+  font-family: "rock salt";
+  font-size: 1.3em;
+  padding-top: 40%;
+  text-align: center;
+}
+
+.flipcard-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+  background-color: #CCFFF9;
+  padding-top: 15%;
+  height: 85%;
+}
+
+.color-a {
+  background-color: #32908F;
+}
+
+.color-b {
+  background-color: #0C7489;
+}
+
+.color-c {
+  background-color: #89909F;
+}
+
+.color-d {
+  background-color: #538083;
+}
+
+.color-e {
+  background-color: #B3C2F2;
+}
+
+.color-f {
+  background-color: #C3ACCE;
+}
+
+.color-g {
+  background-color: #8A89C0;
+}
+
+.color-h {
+  background-color: #DFD9E2;
+}
+
+
+
+
+/*Color Tests*/
+.lightpurple {
+  background-color: #e5def8;
+  width: 200px;
+  height: 200px;
+}
+
+.plum {
+  background-color: #68185a;
+  width: 200px;
+  height: 200px;
+}
+
+.mediumpink {
+  background-color: #C49BBB;
+  width: 200px;
+  height: 200px;
+}
+
+.gray {
+  background-color: #424B54;
+  width: 200px;
+  height: 200px;
+}
+
+.lavendergray {
+  background-color: #C4B7CB;
+  width: 200px;
+  height: 200px;
+}
+/************************************************************************************
+*********************Letter Animation*****************************************
+*************************************************************************************/
+
+
+.letter-wrap {
+  background-color: #D6C9C9; 
+}
+
+.letter-fade {
+  display: inline-block;
+  width: 183px;
+  height: 183px;
+  align-items: center;
+  margin: 2.5px;
+  text-align: center;
+ }
+
+.color1 {
+  background-color: #776885;
+}
+
+.color2 {
+  background-color: #73EEDC;
+}
+
+.color3 {
+  background-color: #009FB7;
+}
+
+.color4 {
+  background-color: #549F93;
+}
+
+
+.front-letter {
+  position: absolute;
+  width: 183px;
+  height: 183px;
+  font-family: "rock salt", cursive, sans-serif;
+  font-size: 3em;
+  line-height: 3em;
+}
+
+.back-letter {
+  background-color: #3f3244;
+  position: absolute;
+  opacity: 0;
+  width: 183px;
+  height: 183px;
+}
+
+.back-letter:hover {
+  opacity: 1;
+  z-index: 2;
+  transition: opacity 1.5s;
+}
+
+
+.front-shape {
+  font-family: "rock salt", cursive, sans-serif;
+  font-size: 3em;
+  line-height: 3em;
+  position: absolute;
+  width: 183px;
+  height: 183px;
+  border-radius: 183px;
+}
+
+/*.front-shape {
+  opacity: 0;
+  transition
+}*/
+
+.back-shape {
+  background-color: #8D80AD;
+  position: absolute;
+  opacity: 0;
+  width: 183px;
+  height: 183px;
+  transition: opacity 4s;
+}
+
+.back-shape:hover {
+  opacity: 1;
+  z-index: 2;
+  transition: opacity 4s;
+}
+
+
+
+/**************************Test*************************/
+.spiral-a {
+  height: 500px;
+}
+
+.anime {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: #8AA9FF;
+  animation: spiral 3s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spiral {
+  0% {
+    opacity: 0;
+    background-color: #B3C6FF;  
+  }
+ 
+ 50% {
+    opacity: .5;
+    background-color: #E8C3DD;
+    transform: translateX(300px) translateY(50px) scale(2); 
+  }
+
+  100% {
+    opacity: 1;
+    background-color: #E8C3DD;
+    transform: scale(3) translateY(70px);
+  }
+
+
+}
+
+
+
+
+
+
+
+/************************************************************************************
+*********************Grid Animation*****************************************
+*************************************************************************************/
+
+.anim-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-gap: 10px;
+}
+
+
+.grid-item {
+  background-color: #60495a;
+}
+
+.c1 {
+  grid-column-start: 1;
+  grid-column-end: span 1;  
+}
+
+.r1 {
+    grid-row-start: 1;
+   grid-row-end: span 1;
+}
+
+.c2 {
+  grid-column-start: 2;
+  grid-column-end: span 1;  
+}
+
+.r2 {
+    grid-row-start: 2;
+   grid-row-end: span 1;
+}
+
+
+
+
+/************************************************************************************
+*********************Story*****************************************
+*************************************************************************************/
+
+.parallax-section {
+  background-attachment: fixed;
+ /* background-position: center;*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+}
+
+.fall-green {
+  background-image: url(../images/story/fall_green.jpg);
+  background-color: #3295a8;
+  width: 960px;
+  height: 300px;
+}
+
+.fall-aqua {
+  background-image: url(../images/story/fall_aqua.jpg);
+  background-color: #3295a8;
+  width: 960px;
+  height: 200px;
+}
+
+
+.fall-pink {
+  background-image: url(../images/story/fall_pink.jpg);
+  background-color: #3295a8;
+  width: 960px;
+  height: 200px;
+}
+
+.fall-purple {
+ background-image: url(../images/story/fall_purple.jpg);
+ background-color: #c9fa5f;
+ width: 960px;
+ height: 200px;
+}
+
+
+
+.blueimage {
+  background-image: url(../images/photo_palm.jpg);
+  background-size: 100% 4000px;
+  background-color: #3295a8;
+  height: 4000px;
+}
+
+.topleft {
+  position: absolute;
+  top: 850px;
+  left: 350px;
+}
+
+.redimage {
+  background-image: url(../images/samples/photo_oregon_1.jpg);
+  background-color: #a832a2;
+  height: 700px;
+}
+
+.greenimage {
+ background-image: url(../images/samples/photo_iceland_glacier);
+ background-color: #c9fa5f;
+ height: 700px;
+}
+
+
+.redimage1 {
+  background-image: url(../images/samples/photo_oregon_1.jpg);
+  background-color: #a832a2;
+  height: 700px;
+}
+
+.redimage2 {
+  background-image: url(../images/samples/photo_palm.jpg);
+  background-color: #a832a2;
+  height: 700px;
+}
+
+.redimage3 {
+  background-image: url(../images/samples/photo_haleakala.jpg);
+  background-color: #a832a2;
+  height: 700px;
+}
+
+
+
+.break {
+  color: #ffffff;
+  background-color: #000000;
+  height: 200px;
+  padding: 25px;
+}
+
+.storytext {
+  background-color: white;
+  opacity: .8;
+  position: absolute;
+}
+
+.abcdef {
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+  border-radius: 140px;
+  background-color: teal;
+  position: absolute;
+  bottom: 100px;
+  left: 20%;
+}
+
+.abcdef:hover {
+  border-radius: 0px;
+  animation: circlesquare 1s;
+  transition: 2s;
+  
+}
+
+@keyframes circlesquare {
+  0%   {
+  transform: translateY(0px);
+  }
+  100% {
+  transform: translateY(40px);
+  }
+}
+
+#test-logo {
+  height: 200px;
+  overflow: scroll;
+}
+
+.logo-animation {
+  background-color: black;
+  height: 600px;
+}
+
+/************************************************************************************
+*********************Extra*******************************************
+*************************************************************************************/
+
+@keyframes wiggle {
+  0%   {
+  transform: translateX(0px);
+  transform: translateY(0px); 
+  }
+  20%   {
+  transform: translateX(-2px);
+  transform: translateY(2px);
+  }
+  40%   {
+  transform: translateX(2px);
+  transform: translateY(-2px); 
+  }
+  60%   {
+  transform: translateX(-2px);
+  transform: translateY(2px); 
+  }  
+  80%   {
+  transform: translateX(2px);
+  transform: translateY(-2px); 
+  }  
+  100%   {
+  transform: translateX(0px); 
+  transform: translateY(0px); 
+  }  
+}
