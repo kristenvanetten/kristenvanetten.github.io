@@ -52,7 +52,7 @@
   background-color: #ffffff;
   height: 520px;
   box-sizing: border-box;
-  transform: translateZ(-1000px);  
+  transform: translateZ(100px);  
 }
 
 .animation-on {
@@ -194,6 +194,7 @@
   text-align: center;
   z-index: 5;
   background-color: red;
+  transform: translateZ(90px); 
   -webkit-animation: twist-down 2s;
           animation: twist-down 2s;
   -webkit-animation-delay: 4.5s;

@@ -69,6 +69,16 @@ a:visited {
   outline-color: #68185A;
 }
 
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+    
+}
+
+button:focus { 
+  outline: none; 
+}
 
 /************************************************************************************
 ************************************Nav Bar******************************************
@@ -451,13 +461,14 @@ padding-top: 25px;
  }   
 
 #webdesign, #design, #animations, #documentation, #writing, #photos {
-  padding-top: 25px;
+  padding-top: 35px;
+  padding-bottom: 15px;
 } 
 
 #webdesign:target, #design:target, #animations:target, #documentation:target, #writing:target, #photos:target {
-  padding-top: 15px;
-  margin-top: -15px;
-} 
+  padding-top: 70px;
+  margin-top: -50px;
+}  
 
 .center {
   text-align: center;
@@ -728,6 +739,7 @@ padding-top: 25px;
   box-shadow: 1px 1px 3px #424b54;
   box-sizing: content-box;
   line-height: 1.4em;
+  cursor: pointer;
 }
 
 .my-button:hover {
@@ -1032,7 +1044,7 @@ footer {
 
 .icon-close {
   color: #ffffff;
-  font-family: "arial black", "Archivo Black", arial, sans-serif;
+  font-family: "Archivo Black", sans-serif;
   font-weight: 500;
   text-align: center;
   vertical-align: middle;
@@ -1042,6 +1054,7 @@ footer {
   border-radius: 30px;
   font-size: 1.4em;
   margin-left: -5px;
+  padding: 0px 6px;
 }
 
 
@@ -1118,15 +1131,8 @@ footer {
 *******************************Media Query - Bottom Nav ****************
 ******************************************************************************/
 
-@media (max-width: 570px) and (min-width: 421px) {
 
-  .bottom-nav {
-    font-size: 2vw;
-  }
-
-}
-
-@media (max-width: 420px) {
+@media (max-width: 480px) {
 
   .nav-container {
     justify-content: space-between;
@@ -1134,7 +1140,7 @@ footer {
   }
 
   .bottom-nav {
-    font-size: 3vw;
+    font-size: 2vw;
   }
 
 }
