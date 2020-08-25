@@ -352,7 +352,7 @@ nav {
   background-color: #fde8e9;
   padding-bottom: 50px;
   padding-top: 75px;  
-  margin-top: -75px;
+  margin-top: -50px;
   min-height: 110vh;
   position: relative;
   z-index: 2;
@@ -379,7 +379,7 @@ nav {
   background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(54,62,69,1) 25%, rgba(98,107,120,1) 50%, rgba(172,179,190,1) 75%, rgba(255,255,255,1) 100%);
   padding-bottom: 15px;
   padding-top: 75px;
-  margin-top: -75px;
+  margin-top: -50px;
   z-index: 1;
   display: inline-block;
   width: 100%;
