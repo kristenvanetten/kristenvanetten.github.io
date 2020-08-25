@@ -739,7 +739,7 @@ padding-top: 25px;
   box-shadow: 1px 1px 3px #424b54;
   box-sizing: content-box;
   line-height: 1.4em;
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 
 .my-button:hover {
