@@ -238,6 +238,7 @@
   text-align: center;
   z-index: 6;
   background-color: #b81919;
+  transform: translateZ(100px); 
   -webkit-animation: twist-across 2s;
           animation: twist-across 2s;
   -webkit-animation-delay: 5.2s;
